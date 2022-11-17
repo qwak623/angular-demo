@@ -1,0 +1,18 @@
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" >
+    <button type="button" (click)="onSelect(hero)">
+      <span>{{hero.id}}</span>
+      <span>{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedHero">
+  <a routerLink="/detail/{{selectedHero.id}}">
+    <span>View Details</span>
+  </a>
+</div>
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
