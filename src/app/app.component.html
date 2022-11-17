@@ -1,7 +1,14 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <br/>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<div class="mb-1">
+  <h1>{{title}}</h1>
+    <nav>
+      <div class="d-flex">
+        <div class="me-1">
+        <a type="button" class="btn btn-secondary" routerLink="/dashboard">Dashboard</a>
+        </div>
+        <div>
+          <a type="button" class="btn btn-secondary" routerLink="/heroes">Heroes</a>
+        </div>
+      </div>
+    </nav>
+  </div>
 <router-outlet></router-outlet>

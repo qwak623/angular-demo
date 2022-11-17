@@ -1,9 +1,11 @@
 <h2>Top heroes</h2>
 
-<div *ngFor="let hero of heroes.slice(0, 4)">
-  <div>
-    <a role="button" routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
-    </a>
+<div class="d-flex">
+  <div class="me-1" *ngFor="let hero of heroes.slice(0, 4)">
+    <div>
+      <a class="btn btn-primary" type="button" routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </div>
   </div>
 </div>

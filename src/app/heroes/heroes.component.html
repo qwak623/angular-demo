@@ -1,16 +1,22 @@
 <h2>My Heroes</h2>
 
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" >
-    <button type="button" (click)="onSelect(hero)">
-      <span>{{hero.id}}</span>
-      <span>{{hero.name}}</span>
+  <div class="mb-1" *ngFor="let hero of heroes">
+    <button class="btn btn-light" type="button" (click)="onSelect(hero)">
+      <div class="d-flex">
+        <div class="me-1 text-white bg-secondary">
+          <span>{{hero.id}}</span>
+        </div>
+        <span>{{hero.name}}</span>
+      </div>
     </button>
-  </li>
+  </div>
 </ul>
 
 <div *ngIf="selectedHero">
-  <a routerLink="/detail/{{selectedHero.id}}">
+  <div class="mb-1"> {{selectedHero.name}} is my hero</div>
+
+  <a class="btn btn-primary" type="button" routerLink="/detail/{{selectedHero.id}}">
     <span>View Details</span>
   </a>
 </div>

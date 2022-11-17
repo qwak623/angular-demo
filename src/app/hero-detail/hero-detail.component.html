@@ -1,10 +1,12 @@
-<div *ngIf="hero">
+<div class="mb-1" *ngIf="hero">
   <h2>{{hero.name}} Details</h2>
-  <div>id: {{hero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+  <div class="form-group">
+    <span>id: {{hero.id}}</span>
+    <div class="col-md-3">
+      <label class="mr-1" for="hero-name">Hero name </label>
+      <input class="form-control" id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    </div>
   </div>
 </div>
 
-<button type="button" (click)="goBack()">go back</button>
+<button class="btn btn-primary" type="button" (click)="goBack()">go back</button>
